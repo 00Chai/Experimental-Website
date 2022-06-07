@@ -284,7 +284,7 @@ padding: 200px 0;
   -webkit-background-clip: text;
   -moz-background-clip: text; 
   -webkit-text-fill-color: transparent;
-  moz-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   text-transform: uppercase;  
   margin-bottom: 32px;      
 }
