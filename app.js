@@ -1,21 +1,24 @@
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar_menu');
-const navLogo = document.querySelector('#navbar_logo')
+var menu = document.getElementById('#mobile-menu');
+if (menu) {
+  menu.addEventListener('click', mobileMenu, true)
+}
+var menuLinks = document.getElementsByClassName('.navbar_menu');
+var navLogo = document.getElementById('#navbar_logo')
 
 //Display mobile menu
-const mobileMenu = () => {
+var mobileMenu = () => {
   menu.classList.toggle('is-active');
-  menuLinks.classList.toggle('active');  
+  menuLinks.classList.toggle('active');
 }
 
-menu.addEventListener('click', mobileMenu)
+
 
 // Show active menu when scrolling
-const highlightMenu = () => {
-  const elem = document.querySelector('.highlight');
-  const homeMenu = document.querySelector('#home-page');
-  const aboutMenu = document.querySelector('#about-page');
-  const serviceMenu = document.querySelector('#services-page');
+var highlightMenu = () => {
+  var elem = document.querySelector('.highlight');
+  var homeMenu = document.querySelector('#home-page');
+  var aboutMenu = document.querySelector('#about-page');
+  var serviceMenu = document.querySelector('#services-page');
   let scrollPos = window.scrollY;
   // console.log(scrollPos);
 
@@ -38,19 +41,23 @@ const highlightMenu = () => {
   if((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
     elem.classList.remove('highlight');
   }
-}
+
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
+}
+
 
 // closing mobile menu when clicking on an item
-const hideMobileMenu = () => {
- const menuBars = document.querySelector('.is-active');
+var hideMobileMenu = () => {
+ var menuBars = document.querySelector('.is-active');
  if(window.innerWidth <= 768 && menuBars) {
    menu.classList.toggle('is-active');
    menuLinks.classList.remove('active');
  }
-}
+
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+}
+
