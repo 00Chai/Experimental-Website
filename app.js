@@ -7,8 +7,8 @@ var navLogo = document.getElementById('#navbar_logo')
 
 //Display mobile menu
 var mobileMenu = () => {
-  menu.classList.toggle('is-active');
-  menuLinks.classList.toggle('active');
+  menu.classList.toggle('is-active', true);
+  menuLinks.classList.toggle('active', true);
 }
 
 
